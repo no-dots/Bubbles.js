@@ -1,0 +1,36 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  font-family: 'Karla', Helvetica, Arial, sans-serif;
+  width: 80%;
+  margin: 5em auto;
+}
+
+figure,
+svg {
+  width: 100%;
+  height: 40vw;
+  margin: 0;
+}
+
+h1 {
+  font-weight: normal;
+}
+
+figure {
+  background-color: #9dbf3e;
+}
+
+label {
+  font-size: 0.7em;
+}
+
+input {
+  border: 0;
+  border-bottom: 3px solid #9dbf3e;
+  margin-left: 1em;
+}
