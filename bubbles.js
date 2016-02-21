@@ -19,9 +19,19 @@ document.addEventListener('DOMContentLoaded', function () {
     $el.setAttribute('cy', event.pageY - bubbles.offsetTop)
     $el.setAttribute('r', 0)
 
+    // Set style
+    $el.style.fill = '#fff'
+    $el.style.opacity = 0.5
+    $el.style.transition = bubbles.delayTime / 2.5 + 'ms all ease-out'
+
     // Hide circle after specified time
     window.setTimeout(function () {
       $el.setAttribute('r', 0)
+
+      // Set another timeout to actually remove the element
+      window.setTimeout(function () {
+        $el.parentNode.removeChild($el)
+      }, $el.style.transitionDuration)
     }, bubbles.delayTime)
 
     // Make circle grow afterwards
