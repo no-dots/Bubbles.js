@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Hide circle after specified time
     window.setTimeout(function () {
-      $el.setAttribute('r', 0)
+      $el.setAttribute('r', 10)
 
       // Set another timeout to actually remove the element
       window.setTimeout(function () {
