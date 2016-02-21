@@ -19,15 +19,15 @@ document.addEventListener('DOMContentLoaded', function () {
     $el.setAttribute('cy', event.pageY - bubbles.offsetTop)
     $el.setAttribute('r', 0)
 
-    // Hide circle after specified time
-    window.setTimeout(function () {
-      $el.setAttribute('r', 0)
-    }, bubbles.delayTime)
-
     // Make circle grow afterwards
     window.setTimeout(function () {
       $el.setAttribute('r', Math.random() * bubbles.maxRadius)
     }, bubbles.delayTime / 10)
+    
+     // Hide circle after specified time
+    window.setTimeout(function () {
+      $el.setAttribute('r', 0)
+    }, bubbles.delayTime)
 
     // Append element
     document.getElementsByTagName('svg')[0].appendChild($el)
