@@ -34,6 +34,11 @@ document.addEventListener('DOMContentLoaded', function () {
       }, $el.style.transitionDuration)
     }, bubbles.delayTime)
 
+    // Make circle grow afterwards
+    window.setTimeout(function () {
+      $el.setAttribute('r', Math.random() * bubbles.maxRadius)
+    }, bubbles.delayTime / 10)
+
     // Append element
     document.getElementsByTagName('svg')[0].appendChild($el)
   })
