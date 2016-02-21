@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
     window.setTimeout(function () {
       $el.setAttribute('r', Math.random() * bubbles.maxRadius)
     }, bubbles.delayTime / 10)
-    
+
     // Hide circle after specified time
     window.setTimeout(function () {
       $el.setAttribute('r', 0)
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
       // Set another timeout to actually remove the element
       window.setTimeout(function () {
         $el.parentNode.removeChild($el)
-      }, $el.style.transitionDuration)
+      }, bubbles.delayTime / 2.5)
     }, bubbles.delayTime)
 
     // Append element
